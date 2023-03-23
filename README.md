@@ -11,10 +11,8 @@ come through.
 You can look in the `Cargo.toml` file to see the dependencies.  Its using:
 
 * tokio for the async executor
-* paho mqtt for the mqtt client.  Might be worth looking at https://crates.io/crates/rumqttc instead
-  for a pure rust mqtt client.   The paho mqtt version will build the C library automatically but does
-  need some deps installed.  It "just worked" on my mac.  https://github.com/eclipse/paho.mqtt.rust.
-  If the pure rust version were used instead then no external dependencies would be needed.
+* pahobin/paholib use the paho mqtt library (C wrapper)
+* rumqttcbin/rumqttclib use the rumqttc library (pure rust)
 
 To build:  `cargo build`
 To run tests: `cargo test`
